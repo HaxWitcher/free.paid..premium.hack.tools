@@ -4,11 +4,13 @@
 	<title>Dva linka</title>
 	<script>
 		window.onload = function() {
-			if (typeof(adblock) == 'undefined') {
+			if (typeof(adblock) === 'undefined') {
 				window.open("https://plex-media.net/");
 				window.open("https://youtu.be/0SoqV9h0t3o");
 			} else {
-				alert("Molimo vas isključite blokator reklama kako biste mogli pristupiti sadržaju.");
+				var message = document.createElement("div");
+				message.innerHTML = "Molimo isključite blokiranje oglasa kako biste mogli pristupiti sadržaju.";
+				document.body.appendChild(message);
 			}
 		}
 	</script>
